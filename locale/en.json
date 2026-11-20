@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "billion-context session cleanup",
+    "description": "List, delete and purge billion-context session records. Select individual sessions or clear all history at once, keeping the session in active use by default.",
+    "detail": "docs/DETAIL.md"
+  }
+}
