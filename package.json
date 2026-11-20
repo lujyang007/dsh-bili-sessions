@@ -1,0 +1,54 @@
+{
+  "name": "dsh-bili-sessions",
+  "version": "0.1.0",
+  "description": "List, delete and purge billion-context session records from inside DSH. 在 DSH 内列出、删除与清空 billion-context 会话记录。",
+  "icon": "icon.svg",
+  "license": "MIT",
+  "type": "module",
+  "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lujyang007/dsh-bili-sessions.git"
+  },
+  "homepage": "https://github.com/lujyang007/dsh-bili-sessions#readme",
+  "bugs": {
+    "url": "https://github.com/lujyang007/dsh-bili-sessions/issues"
+  },
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "billion-context",
+    "sessions",
+    "cleanup"
+  ],
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json",
+    "./locale/*.json": "./locale/*.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "icon.svg",
+    "locale/*.json",
+    "docs"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "engines": {
+    "dsh": ">=0.2.0-0"
+  }
+}
