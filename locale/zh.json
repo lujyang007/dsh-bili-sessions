@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "billion-context 会话清理",
+    "description": "列出、删除与清空 billion-context 的会话记录。支持勾选单条删除与一键清空全部历史，默认保留当前正在使用的会话。",
+    "detail": "docs/DETAIL.md"
+  }
+}
