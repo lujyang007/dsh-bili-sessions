@@ -14,6 +14,15 @@ DSH 沙箱阻断（`spawn EPERM`）。本插件把清理入口搬进 Host 主进
 - 默认保护正在使用的会话
 - 标题与首句自动对 API key 打码
 
+## 安全
+
+四个 HTTP 路由全部先过宿主的 `ctx.connection.requestRejection()`：Host 校验（防 DNS
+重绑定）、`Sec-Fetch-Site: cross-site` 拒绝、Origin 同源校验、浏览器会话 cookie 认证。
+取不到 `connection` 服务时 fail-closed 返回 503，不放行。
+
+这是 0.1.1 补上的。0.1.0 的路由没有访问检查，任何网页都能向 `127.0.0.1` 发一个
+无 CORS 预检的 `text/plain` POST 清空会话 —— 请勿使用 0.1.0。
+
 ## 安装
 
 **方式一：插件市场**（推荐）。在 DSH 的「插件 → 插件市场」里搜索 `dsh-bili-sessions` 安装。
