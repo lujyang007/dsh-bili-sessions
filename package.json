@@ -1,6 +1,6 @@
 {
   "name": "dsh-bili-sessions",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "List, delete and purge billion-context session records from inside DSH. 在 DSH 内列出、删除与清空 billion-context 会话记录。",
   "icon": "icon.svg",
   "license": "MIT",
